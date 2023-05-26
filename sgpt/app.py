@@ -181,7 +181,7 @@ def main(
             show_choices=False,
             show_default=False,
         )
-        if option in ("e", "y"):
+        if option in ("e", "y", "д"):
             # "y" option is for keeping compatibility with old version.
             run_command(full_completion)
         elif option == "d":
