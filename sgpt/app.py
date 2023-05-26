@@ -176,12 +176,12 @@ def main(
     while shell and not stdin_passed:
         option = typer.prompt(
             text="[E]xecute, [D]escribe, [A]bort",
-            type=Choice(("e", "d", "a", "y"), case_sensitive=False),
+            type=Choice(("e", "d", "a", "y", "д"), case_sensitive=False),
             default="e" if cfg.get("DEFAULT_EXECUTE_SHELL_CMD") == "true" else "a",
             show_choices=False,
             show_default=False,
         )
-        if option in ("e", "y"):
+        if option in ("e", "y", "д"):
             # "y" option is for keeping compatibility with old version.
             run_command(full_completion)
         elif option == "d":
